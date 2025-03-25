@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissor</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="play(0)" ;>Rock</button>
+      <button onclick="play(1)" ;>Paper</button>
+      <button onclick="play(2)" ;>Scissor</button>
+      <button onclick="console.log(scores);";>Scores</button>
+      <button onclick="resetscore()";>reset</button>
+    </p>
+    <script>
+      let scores = {
+        win : 0,
+        loss : 0,
+        tie :0 
+      }
+     let savedscores = JSON.parse(localStorage.getItem('score'));
+        if(savedscores)
+      {
+        scores = savedscores;
+      }
+      function play(choice){
+        if(choice == 0){
+          rock();
+        }
+        else if(choice === 1){
+          paper();
+        }
+        else{
+          Scissor();
+        }
+      function rock() { 
+        let random = Math.round(Math.random() * 2);
+        if (random == 1) {
+          scores.loss++;
+          console.log("you loose Computer wins");
+        } else if (random == 2) {
+          scores.win++;
+          console.log("you win computer looses");
+        } else {
+          scores.tie++;
+          console.log("A brethtaking tie");
+        }
+      }
+      function paper() {
+        let random = Math.round(Math.random() * 2);
+        if (random == 0) {
+          scores.win++;
+          console.log("you win Computer looses");
+        } else if (random == 2) {
+          scores.loss++;
+          console.log("you lose computer wins");
+        } else {
+          scores.tie++;
+          console.log("A brethtaking tie");
+        }
+      }
+      function Scissor() {
+        let random = Math.round(Math.random() * 2);
+        if (random == 0) {
+          scores.loss++;
+          console.log("you loose Computer wins");
+        } else if (random == 1) {
+          scores.win++;
+          console.log("you win computer looses");
+        } else {
+          scores.tie++;
+          console.log("A brethtaking tie");
+        }
+      }
+     localStorage.setItem('score',JSON.stringify(scores));
+    }
+    function resetscore(){
+      localStorage.removeItem('score');
+        }
+        var a = document.querySelector("button");
+     </script>
+  </body>
+</html>

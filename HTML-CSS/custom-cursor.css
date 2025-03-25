@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#crsr {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(250, 249, 249);
+  transition: all linear 0.08s;
+  border-radius: 50%;
+  position: absolute;
+  mix-blend-mode: exclusion;
+}
+h1 {
+  color: #fff;
+  font-size: 10vw;
+  transition: all ease-out 0.3s;
+}
+h1:hover {
+  background: linear-gradient(90deg, #ff7f50, #ff1493, #1e90ff, #32cd32);
+  background-clip: text;
+  color: transparent;
+  
+}

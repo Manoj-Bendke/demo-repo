@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <p>Adults Plain Cotton T-shirt</p>
+    <p>Price: $7.99</p>
+    <p>
+      <button style="background-color: yellow" onclick="alert('Added'),kart++">
+        Add to cart
+      </button>
+      <button style="background-color: orange" onclick="hello()">
+        Buy Now
+      </button>
+
+      <button style="background-color: aqua" onclick="alert(`kart quantity is ${kart}`)">
+        Show Quantity
+      </button>
+      <button style="background-color: rgb(87, 245, 13)" onclick="kart=0">
+        reset Kart
+      </button>
+    </p>
+
+    <script>
+      let kart = 0;
+      function hello() {
+        alert("Purchased");
+        console.log("Loading...");
+      }
+    </script>
+  </body>
+</html>
